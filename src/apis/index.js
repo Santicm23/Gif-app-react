@@ -1,0 +1,2 @@
+
+export { getGifs } from './giphy';
