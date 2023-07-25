@@ -6,21 +6,21 @@ import { getGifs } from '../apis';
 
 export const useFetchGifs = (category) => {
 
-    const [images, setImages] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+  const [images, setImages] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-    const getAndSetGifs = async () => {
-        const gifs = await getGifs(category);
-        setImages(gifs);
-        setIsLoading(false);
-    }
+  const getAndSetGifs = async () => {
+    const gifs = await getGifs(category);
+    setImages(gifs);
+    setIsLoading(false);
+  }
 
-    useEffect(() => {
-        getAndSetGifs();
-    }, []);
+  useEffect(() => {
+    getAndSetGifs();
+  }, []);
 
-    return {
-        images,
-        isLoading
-    }
+  return {
+    images,
+    isLoading
+  };
 }
