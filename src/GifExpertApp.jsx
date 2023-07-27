@@ -20,11 +20,11 @@ export const GifExpertApp = () => {
 
       <AddCategory onAddCategory={ addCategory } />
 
-      { 
+      {
         categories.map( category => (
           <GifGrid
-              key={ category}
-              category={ category }
+            key={ category }
+            category={ category }
           />
         ))
       }
